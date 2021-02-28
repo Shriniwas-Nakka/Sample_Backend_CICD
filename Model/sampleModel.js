@@ -18,7 +18,7 @@ let users = mongoose.model('users', userSchema);
 
 class SampleModel {
 
-    create = (req) => {
+    create(req) {
         return users.create(req).then(result => {
             return result;
         }).catch(error => {

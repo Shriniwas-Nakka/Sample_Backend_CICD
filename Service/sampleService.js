@@ -2,7 +2,7 @@ const userModel = require('../Model/sampleModel');
 
 class SampleService {
 
-    addEmployeeService = (req, res) => {
+    addEmployeeService(req, res) {
         return userModel.create(req).then(result => {
             return ({ message: 'User added !', data: result })
         }).catch(error => {
