@@ -3,7 +3,7 @@ const response = {}
 
 class SampleController {
 
-    addEmployeeController = (req, res) => {
+    addEmployeeController(req, res) {
         sampleService.addEmployeeService(req.body)
             .then((result) => {
                 response.success = true;
