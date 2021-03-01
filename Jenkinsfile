@@ -15,9 +15,9 @@ pipeline {
         stage('Build') { 
             steps { 
                 sh ''' #!/bin/bash
-                # ssh -i /demo-key.pem ubuntu@3.138.244.133 'sudo rm -rf /home/ubuntu/backend-pipeline'
-                # ssh -i /demo-key.pem ubuntu@3.138.244.133 'mv /home/ubuntu/backend-pipeline /home/ubuntu/keep-backend'
-                # ssh -i /demo-key.pem ubuntu@3.138.244.133 'bash /home/ubuntu/buildJenkis.sh'
+                ssh -i /demo-key.pem ubuntu@3.138.244.133 'sudo rm -rf /home/ubuntu/Sample_Backend_CICD'
+                ssh -i /demo-key.pem ubuntu@3.138.244.133 'mv /home/ubuntu/backend-pipeline /home/ubuntu/Sample_Backend_CICD'
+                ssh -i /demo-key.pem ubuntu@3.138.244.133 'bash /home/ubuntu/buildJenkis.sh'
                 echo ===> Build stage
                 '''
             }
